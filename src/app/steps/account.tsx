@@ -10,6 +10,12 @@ const Account: React.FC<StepProps> = ({ onNext, formData, updateFormData }) => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
+        // password greater than 10 characters
+        if (e.currentTarget.password.value.length < 10) {
+            alert('Password must be at least 10 characters long');
+            return;
+        }
+
         if (e.currentTarget.password.value !== e.currentTarget.confirmPassword.value) {
             alert('Passwords do not match');
             return;

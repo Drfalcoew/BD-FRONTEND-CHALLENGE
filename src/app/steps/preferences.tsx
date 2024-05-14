@@ -3,8 +3,8 @@ import { StepProps } from '../page';
 import './steps.css';
 
 const Preferences: React.FC<StepProps> = ({ onNext, onPrev, updateFormData }) => {
-    const [notifications, setNotifications] = useState(false);
-    const [shareInformation, setShareInformation] = useState(false);
+    const [notifications, setNotifications] = useState('No');
+    const [shareInformation, setShareInformation] = useState('No');
     const [notificationPreference, setNotificationPreference] = useState('');
 
     const handleSubmit = (e: any) => {
@@ -26,8 +26,8 @@ const Preferences: React.FC<StepProps> = ({ onNext, onPrev, updateFormData }) =>
                     type='checkbox'
                     id='wantsNotifications'
                     name='wantsNotifications'
-                    checked={notifications}
-                    onChange={(e) => setNotifications(e.target.checked)}
+                    checked={notifications === 'Yes'}
+                    onChange={(e) => setNotifications(e.target.checked ? 'Yes' : 'No')}
                 />
                 <label className='contact-form-label' htmlFor='wantsNotifications'>Send notifications</label>
             </div>
@@ -38,8 +38,8 @@ const Preferences: React.FC<StepProps> = ({ onNext, onPrev, updateFormData }) =>
                     type='checkbox'
                     id='shareInformation'
                     name='shareInformation'
-                    checked={shareInformation}
-                    onChange={(e) => setShareInformation(e.target.checked)}
+                    checked={shareInformation === 'Yes'}
+                    onChange={(e) => setShareInformation(e.target.checked ? 'Yes' : 'No')}
                 />
                 <label className='contact-form-label' htmlFor='shareInformation'>Share information with related marketers</label>
             </div>
@@ -52,7 +52,7 @@ const Preferences: React.FC<StepProps> = ({ onNext, onPrev, updateFormData }) =>
                     name='notificationPreferences'
                     value={notificationPreference}
                     onChange={(e) => setNotificationPreference(e.target.value)}
-                    required={notifications}
+                    required={notifications === 'Yes'}
                 >
                     <option value=''>Select notification preference</option>
                     <option value='email'>Email</option>

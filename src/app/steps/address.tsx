@@ -37,7 +37,7 @@ const Address: React.FC<StepProps> = ({ onNext, onPrev, formData, updateFormData
                     </label>
                     <select className='contact-form-field contact-form-triple contact-form-select' defaultValue={formData.country || ''} id='country' name='country' required>
                         <option value=''>Select a country</option>
-                        <option value='USA'>United States</option>
+                        <option value='US'>United States</option>
                         <option value='UK'>United Kingdom</option>
                         <option value='Canada'>Canada</option>
                         <option value='Australia'>Australia</option>
@@ -65,9 +65,9 @@ const Address: React.FC<StepProps> = ({ onNext, onPrev, formData, updateFormData
             </div>
             <div className='contact-form-group'>
                 <label className='contact-form-label' htmlFor='phoneNumber'>
-                    <FontAwesomeIcon icon={faEnvelope} /> Phone Number
+                    <FontAwesomeIcon icon={faEnvelope} /> Phone Number *
                 </label>
-                <input className='contact-form-field contact-form-single' defaultValue={formData.phone || ''} type='text' id='phoneNumber' name='phoneNumber' />
+                <input className='contact-form-field contact-form-single' defaultValue={formData.phone || ''} required type='text' id='phoneNumber' name='phoneNumber' />
             </div>
             <div className="form-actions">
                 <button className="form-btn" type='submit'>
