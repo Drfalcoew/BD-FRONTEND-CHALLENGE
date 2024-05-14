@@ -38,15 +38,15 @@ Depends on the package manager you prefer using!
 
 #### Requirements:
 
-- [ ] Please ensure you have all of the required fields and **follow** the structure of the provided wireframe.
-- [ ] The form should be broken up into multiple steps and only one step should be visible at a time.
-- [ ] Every step outside of the first step **SHOULD** have a next and back button.
-  - [ ] The first step **should not** have a back button.
-  - [ ] The next button goes to the next step.
-  - [ ] The next button should be disabled if the user has **not** filled out all of the **required** fields.
-  - [ ] The back button should go back to the previous step.
-- [ ] Going back to the previous step **should not** require the user to fill out the **required** fields again.
-- [ ] Submitting the form should not refresh the page.
+- [x] Please ensure you have all of the required fields and **follow** the structure of the provided wireframe.
+- [x] The form should be broken up into multiple steps and only one step should be visible at a time.
+- [x] Every step outside of the first step **SHOULD** have a next and back button.
+  - [x] The first step **should not** have a back button.
+  - [x] The next button goes to the next step.
+  - [x] The next button should be disabled if the user has **not** filled out all of the **required** fields.
+  - [x] The back button should go back to the previous step.
+- [x] Going back to the previous step **should not** require the user to fill out the **required** fields again.
+- [x] Submitting the form should not refresh the page.
 - [ ] Once submitted, the form data should be sent to the following endpoint `/api/register` which is located at the following path `./src/app/api/register/route.ts`.**It should be possible to see a success message with your multistep form when submitting to the aforementioned endpoint.**
 ```ts
   // Success message
