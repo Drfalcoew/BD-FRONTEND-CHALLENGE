@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { zfd } from "zod-form-data";
 
-const passwordRegex = /^[\w&.\-]*$/;
+const passwordRegex = /^.{10,}$/;
 
 export const formJsonSchema = z
   .object({

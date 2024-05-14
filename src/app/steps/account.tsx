@@ -73,7 +73,7 @@ const Account: React.FC<StepProps> = ({ onNext, formData, updateFormData }) => {
                         <FontAwesomeIcon icon={faLock} width={12} /> Confirm Password *
                     </label>
                     <input className='contact-form-field'  defaultValue={formData.confirmPassword || ''}
-                    type='password' id='confirmpassword' name='confirmPassword' required />
+                    type='password' id='confirmPassword' name='confirmPassword' required />
                 </div>
             </div>
 

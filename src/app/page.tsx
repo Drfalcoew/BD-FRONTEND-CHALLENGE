@@ -42,7 +42,8 @@ export default function Home() {
         throw new Error('Network response was not ok.');
       })
       .then(data => {
-        console.log(data);
+        // Send to success page
+        alert(data.data.message);
       })
       .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
