@@ -28,22 +28,23 @@ export default function Home() {
     if (currentStep === steps.length - 1) {
       // Submit the form if we're on the last step
 
-      console.log('Submitting form:', formData);
-
       fetch('/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
-      }).then(response => {
+      })
+      .then(response => {
         if (response.ok) {
           return response.json();
         }
         throw new Error('Network response was not ok.');
-      }).then(data => {
+      })
+      .then(data => {
         console.log(data);
-      }).catch(error => {
+      })
+      .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
       });
   

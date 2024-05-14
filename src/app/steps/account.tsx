@@ -26,14 +26,14 @@ const Account: React.FC<StepProps> = ({ onNext, formData, updateFormData }) => {
             <div className='contact-form-outer-group'>
                 <div className='contact-form-group'>
                     <label className='contact-form-label' htmlFor='firstname'>
-                        <FontAwesomeIcon icon={faUser} /> First Name *
+                        <FontAwesomeIcon icon={faUser} width={12} /> First Name *
                     </label>
                     <input className='contact-form-field' defaultValue={formData.firstname || ''}
                     type='text' id='firstname' name='firstname' required />
                 </div>
                 <div className='contact-form-group'>
                     <label className='contact-form-label' htmlFor='lastname'>
-                        <FontAwesomeIcon icon={faUser} /> Last Name *
+                        <FontAwesomeIcon icon={faUser} width={12} /> Last Name *
                     </label>
                     <input className='contact-form-field' defaultValue={formData.lastname || ''} 
                     type='text' id='lastname' name='lastname' required />
@@ -41,14 +41,14 @@ const Account: React.FC<StepProps> = ({ onNext, formData, updateFormData }) => {
             </div>
             <div className='contact-form-group'>
                 <label className='contact-form-label' htmlFor='username'>
-                    <FontAwesomeIcon icon={faUser} /> Username *
+                    <FontAwesomeIcon icon={faUser} width={12} /> Username *
                 </label>
                 <input className='contact-form-field contact-form-single' defaultValue={formData.username || ''}
                 type='username' id='username' name='username' required />
             </div>
             <div className='contact-form-group'>
                 <label className='contact-form-label' htmlFor='email'>
-                    <FontAwesomeIcon icon={faEnvelope} /> Email *
+                    <FontAwesomeIcon icon={faEnvelope} width={12} /> Email *
                 </label>
                 <input className='contact-form-field contact-form-single' defaultValue={formData.email || ''}
                 type='email' id='email' name='email' required />
@@ -57,14 +57,14 @@ const Account: React.FC<StepProps> = ({ onNext, formData, updateFormData }) => {
             <div className='contact-form-outer-group'>
                 <div className='contact-form-group'>
                     <label className='contact-form-label' htmlFor='password'>
-                        <FontAwesomeIcon icon={faLock} /> Password *
+                        <FontAwesomeIcon icon={faLock} width={12} /> Password *
                     </label>
                     <input className='contact-form-field' defaultValue={formData.password || ''}
                     type='password' id='password' name='password' required />
                 </div>
                 <div className='contact-form-group'>
                     <label className='contact-form-label' htmlFor='lastname'>
-                        <FontAwesomeIcon icon={faLock} /> Confirm Password *
+                        <FontAwesomeIcon icon={faLock} width={12} /> Confirm Password *
                     </label>
                     <input className='contact-form-field'  defaultValue={formData.confirmPassword || ''}
                     type='password' id='confirmpassword' name='confirmPassword' required />
